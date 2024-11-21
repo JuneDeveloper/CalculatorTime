@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="name_project">Калькулятор времени</string>
+    <string name="name_result">Результат</string>
+    <string name="name_reset">Очистить</string>
+    <string name="name_exit">Выход</string>
+    <string name="name_plus">+</string>
+    <string name="name_minus">-</string>
+    <string name="m">m</string>
+    <string name="s">s</string>
+    <string name="h">h</string>
+</resources>
