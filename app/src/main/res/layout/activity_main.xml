@@ -7,28 +7,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/mainTextTV"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMain"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/name_project"
-        android:textSize="32sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.1"/>
+        android:background="@color/title"
+        tools:ignore="MissingConstraints" />
+
+
 
     <LinearLayout
         android:id="@+id/linearLayoutInputOneOperand"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="18pt"
-        android:layout_marginRight="100pt"
+        android:layout_marginRight="105pt"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainTextTV"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMain"
         app:layout_constraintVertical_bias="0.1">
 
         <EditText
@@ -65,10 +62,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginRight="18pt"
-        android:layout_marginLeft="100pt"
+        android:layout_marginLeft="105pt"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainTextTV"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarMain"
         app:layout_constraintVertical_bias="0.1"
         android:orientation="horizontal">
         <EditText
@@ -117,7 +114,8 @@
             android:layout_marginRight="8pt"
             android:layout_marginLeft="8pt"
             android:text="@string/name_plus"
-            android:textSize="22sp"/>
+            android:textSize="22sp"
+            android:backgroundTint="@color/button"/>
         <Button
             android:id="@+id/buttonDifBTN"
             android:layout_width="match_parent"
@@ -126,7 +124,8 @@
             android:layout_marginLeft="8pt"
             android:layout_marginRight="8pt"
             android:text="@string/name_minus"
-            android:textSize="22sp"/>
+            android:textSize="22sp"
+            android:backgroundTint="@color/button"/>
     </LinearLayout>
 
     <TextView
@@ -136,40 +135,12 @@
         android:gravity="center_horizontal"
         android:text="@string/name_result"
         android:textSize="36sp"
+        android:textColor="@color/black"
         app:layout_constraintVertical_bias="0.1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutChoiceOperand" />
-
-    <LinearLayout
-        android:id="@+id/linearLayoutResetExit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8pt"
-        android:layout_marginRight="8pt"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultTV"
-        app:layout_constraintVertical_bias="0.1"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/buttonResetBTN"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/name_reset"
-            android:textSize="22sp"/>
-        <Button
-            android:id="@+id/buttonExitBTN"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/name_exit"
-            android:textSize="22sp"/>
-
-    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
